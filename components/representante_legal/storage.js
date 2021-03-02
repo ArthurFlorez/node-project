@@ -1,16 +1,4 @@
-const db = require('mongoose')
 const Model = require('./model')
-
-const uri = "mongodb+srv://sa:ups12345@cluster0.g1uoc.mongodb.net/ups?retryWrites=true&w=majority"
-
-db.Promise = global.Promise
-db.connect(uri, {
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    dbName:'ups'
-})
-    .then(() => console.log('[db] Conectada con éxito, modelo representante_legal'))
-    .catch((error) => console.error('[error] ', error))
 
 function addRepresentanteLegal( representante_legal ) {
     const objeto = new Model( representante_legal )
