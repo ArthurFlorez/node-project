@@ -8,5 +8,5 @@ app.use( bodyParser.urlencoded({extended:false}) )
 router(app)
 
 app.use('/', express.static('public'))
-app.listen(3000)
-console.log('La aplicación está escuchando en http://localhost:3000')
+app.listen(80)
+console.log('La aplicación está escuchando en http://localhost:80')
